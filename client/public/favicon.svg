@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <!-- Gold coin 1 -->
+  <circle cx="35" cy="45" r="25" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+  <text x="35" y="50" font-size="20" fill="#DAA520" text-anchor="middle">$</text>
+  
+  <!-- Gold coin 2 -->
+  <circle cx="65" cy="55" r="25" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+  <text x="65" y="60" font-size="20" fill="#DAA520" text-anchor="middle">$</text>
+</svg>

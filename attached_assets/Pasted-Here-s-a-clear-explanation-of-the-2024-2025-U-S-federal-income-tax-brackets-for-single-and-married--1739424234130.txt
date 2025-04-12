@@ -1,0 +1,370 @@
+Here’s a clear explanation of the 2024-2025 U.S. federal income tax brackets for single and married filers, including how to calculate taxes owed and effective tax rates. This assumes the standard deduction (
+14
+,
+600
+f
+o
+r
+s
+i
+n
+g
+l
+e
+f
+i
+l
+e
+r
+s
+;
+14,600forsinglefilers;29,200 for married filers) is applied first to reduce taxable income.
+
+Single Filing (2024)
+Standard Deduction: 
+14
+,
+600
+∗
+∗
+T
+a
+x
+a
+b
+l
+e
+I
+n
+c
+o
+m
+e
+∗
+∗
+=
+G
+r
+o
+s
+s
+I
+n
+c
+o
+m
+e
+–
+14,600∗∗TaxableIncome∗∗=GrossIncome–14,600
+
+Tax Rate	Income Bracket (Taxable)	Tax Owed per Bracket
+10%	
+0
+–
+0–11,600	10% of amount ≤ $11,600
+12%	
+11
+,
+601
+–
+11,601–47,150	
+1
+,
+160
++
+12
+1,160+1211,600
+22%	
+47
+,
+151
+–
+47,151–100,525	
+5
+,
+426
++
+22
+5,426+2247,150
+24%	
+100
+,
+526
+–
+100,526–191,950	
+17
+,
+169
++
+24
+17,169+24100,525
+32%	
+191
+,
+951
+–
+191,951–243,725	
+39
+,
+111
++
+32
+39,111+32191,950
+35%	
+243
+,
+726
+–
+243,726–609,350	
+55
+,
+679
++
+35
+55,679+35243,725
+37%	> $609,350	
+183
+,
+647
++
+37
+183,647+37609,350
+Married Filing Jointly (2024)
+Standard Deduction: 
+29
+,
+200
+∗
+∗
+T
+a
+x
+a
+b
+l
+e
+I
+n
+c
+o
+m
+e
+∗
+∗
+=
+G
+r
+o
+s
+s
+I
+n
+c
+o
+m
+e
+–
+29,200∗∗TaxableIncome∗∗=GrossIncome–29,200
+
+Tax Rate	Income Bracket (Taxable)	Tax Owed per Bracket
+10%	
+0
+–
+0–23,200	10% of amount ≤ $23,200
+12%	
+23
+,
+201
+–
+23,201–94,300	
+2
+,
+320
++
+12
+2,320+1223,200
+22%	
+94
+,
+301
+–
+94,301–201,050	
+10
+,
+852
++
+22
+10,852+2294,300
+24%	
+201
+,
+051
+–
+201,051–383,900	
+34
+,
+337
++
+24
+34,337+24201,050
+32%	
+383
+,
+901
+–
+383,901–487,450	
+78
+,
+221
++
+32
+78,221+32383,900
+35%	
+487
+,
+451
+–
+487,451–731,200	
+111
+,
+357
++
+35
+111,357+35487,450
+37%	> $731,200	
+196
+,
+670
++
+37
+196,670+37731,200
+Example Calculation
+Single Filer Earning $60,000
+
+Taxable Income: 
+60
+,
+000
+–
+60,000–14,600 = $45,400
+
+Tax Calculation:
+
+10% on 
+11
+,
+600
+→
+11,600→1,160
+
+12% on (
+45
+,
+400
+–
+45,400–11,600) = 
+33
+,
+800
+→
+33,800→4,056
+
+Total Tax: 
+1
+,
+160
++
+1,160+4,056 = $5,216
+
+Effective Tax Rate: (
+5
+,
+216
+/
+5,216/60,000) × 100 ≈ 8.69%
+
+Married Couple Earning $200,000
+
+Taxable Income: 
+200
+,
+000
+–
+200,000–29,200 = $170,800
+
+Tax Calculation:
+
+10% on 
+23
+,
+200
+→
+23,200→2,320
+
+12% on (
+94
+,
+300
+–
+94,300–23,200) = 
+71
+,
+100
+→
+71,100→8,532
+
+22% on (
+170
+,
+800
+–
+170,800–94,300) = 
+76
+,
+500
+→
+76,500→16,830
+
+Total Tax: 
+2
+,
+320
++
+2,320+8,532 + 
+16
+,
+830
+=
+∗
+∗
+16,830=∗∗27,682**
+
+Effective Tax Rate: (
+27
+,
+682
+/
+27,682/200,000) × 100 ≈ 13.84%
+
+How to Prompt an LLM
+Provide this structure:
+
+Input: Gross income and filing status.
+
+Steps:
+
+Subtract the standard deduction.
+
+Apply progressive tax rates to each bracket.
+
+Sum taxes owed across brackets.
+
+Divide total tax by gross income for effective rate.
+
+Example prompt:
+"Calculate the effective tax rate and total dollars owed for a single filer with a gross income of $85,000 using the 2024 brackets and standard deduction."
+
+The LLM should return:
+
+Taxable income, taxes per bracket, total tax, and effective rate.
+

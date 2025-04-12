@@ -8,6 +8,12 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-gradient-to-br from-green-50 via-emerald-100 to-teal-100 min-h-screen text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply border-2 border-custom-button-border hover:bg-custom-hover-green transition-colors duration-200;
   }
 }

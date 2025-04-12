@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { type TaxCalculation } from "@shared/schema";
+import { type TaxCalculation, Countries } from "@shared/schema";
 import { AlertCircle } from "lucide-react";
 import {
   Tooltip,
@@ -20,7 +20,7 @@ export default function TaxResults({ results }: TaxResultsProps) {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       })}`,
-      tooltip: "The total amount of federal income tax you owe for the year",
+      tooltip: "The total amount of income tax you owe for the year",
     },
     {
       title: "Effective Tax Rate",
@@ -63,7 +63,7 @@ export default function TaxResults({ results }: TaxResultsProps) {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Tax Insights</CardTitle>
+          <CardTitle className="text-lg">Tax Insights for {Countries[results.country as keyof typeof Countries]}</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">{results.insights}</p>

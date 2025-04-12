@@ -1,0 +1,24 @@
+Terms of Service
+Ownership
+OpenSourceWebApps.com is owned by KianErfaan.com.
+
+Governing Law and Arbitration
+These Terms of Service are governed by the laws of the Commonwealth of Pennsylvania. Any disputes arising from these terms will be resolved through binding arbitration in Philadelphia for U.S. users.
+
+Users in Canada, the UK, France, Germany, Spain, Italy, Sweden, Poland, Australia, or Japan may choose arbitration in their home country, provided they cover associated travel and accommodation costs. All non-US users can opt for a one-panel AAA-ICDR arbitration in New York State.
+
+To opt out of arbitration, email kianerfaan@proton.me.
+
+Disclaimer for Experimental Open Source Tools and Web Apps
+All tools and web apps provided on OpenSourceWebApps.com are experimental and open source. They are offered "as is" without any warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+
+By using these tools and web apps, you acknowledge that you do so at your own risk. You agree to hold harmless OpenSourceWebApps.com, KianErfaan.com, and their owners, employees, and affiliates from any liability, damages, or losses that may arise from your use of these tools and web apps.
+
+These tools and web apps may be updated or modified at any time without notice. We do not guarantee their continued availability, functionality, or compatibility with your systems or data.
+
+Since these tools and web apps are open source, you are encouraged to review the source code to understand how they function and to identify any potential risks or issues. You are solely responsible for determining whether these tools and web apps are suitable for your needs and for taking appropriate precautions, such as backing up your data.
+
+While we aim to provide useful and functional tools, we cannot guarantee their performance or security. Please use them at your own discretion.
+
+Responsible Use
+Please use the site responsibly.

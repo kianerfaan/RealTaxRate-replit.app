@@ -1,0 +1,97 @@
+// Define interfaces for type safety
+interface TaxBracket {
+  min: number;
+  max?: number; // undefined max means infinite upper bound
+  rate: number;
+}
+
+interface CountryTaxConfig {
+  name: string;
+  currency: string;
+  brackets: TaxBracket[];
+}
+
+interface TaxCalculationResult {
+  country: string;
+  totalTax: number;
+  effectiveRate: number;
+  currency: string;
+}
+
+// Tax configurations for different countries (using 2023 rates as examples)
+const COUNTRY_TAX_CONFIGS: CountryTaxConfig[] = [
+  // United States (Federal Income Tax)
+  {
+    name: "United States",
+    currency: "USD",
+    brackets: [
+      { min: 0, max: 11000, rate: 0.10 },
+      { min: 11001, max: 44725, rate: 0.12 },
+      { min: 44726, max: 95375, rate: 0.22 },
+      { min: 95376, max: 182100, rate: 0.24 },
+      { min: 182101, max: 231250, rate: 0.32 },
+      { min: 231251, max: 578125, rate: 0.35 },
+      { min: 578126, rate: 0.37 }
+    ]
+  },
+  // Canada (Federal Income Tax)
+  {
+    name: "Canada",
+    currency: "CAD",
+    brackets: [
+      { min: 0, max: 53359, rate: 0.15 },
+      { min: 53360, max: 106717, rate: 0.205 },
+      { min: 106718, max: 165430, rate: 0.26 },
+      { min: 165431, max: 235675, rate: 0.29 },
+      { min: 235676, rate: 0.33 }
+    ]
+  },
+  // ... Add similar configurations for other countries
+];
+
+// Core tax calculation function
+function calculateIncomeTax(income: number, brackets: TaxBracket[]): number {
+  let taxOwed = 0;
+  
+  for (const bracket of brackets) {
+    if (income <= bracket.min) continue;
+    
+    const bracketMax = bracket.max ?? Infinity;
+    const taxableAmount = Math.min(income, bracketMax) - bracket.min;
+    
+    if (taxableAmount <= 0) continue;
+    
+    taxOwed += taxableAmount * bracket.rate;
+  }
+  
+  return taxOwed;
+}
+
+// Comparison function
+function compareInternationalTaxes(income: number): TaxCalculationResult[] {
+  if (income < 0) throw new Error("Income must be a positive number");
+  
+  return COUNTRY_TAX_CONFIGS.map(config => {
+    const totalTax = calculateIncomeTax(income, config.brackets);
+    const effectiveRate = totalTax / income;
+    
+    return {
+      country: config.name,
+      totalTax: parseFloat(totalTax.toFixed(2)),
+      effectiveRate: parseFloat(effectiveRate.toFixed(4)),
+      currency: config.currency
+    };
+  }).sort((a, b) => a.effectiveRate - b.effectiveRate);
+}
+
+// Example usage
+const annualIncome = 75000;
+const taxComparisons = compareInternationalTaxes(annualIncome);
+
+console.log(`Tax Comparison for ${annualIncome}:`);
+taxComparisons.forEach(result => {
+  console.log(
+    `${result.country.padEnd(15)}: ${(result.effectiveRate * 100).toFixed(2)}%` +
+    ` (${result.currency} ${result.totalTax.toLocaleString()})`
+  );
+});

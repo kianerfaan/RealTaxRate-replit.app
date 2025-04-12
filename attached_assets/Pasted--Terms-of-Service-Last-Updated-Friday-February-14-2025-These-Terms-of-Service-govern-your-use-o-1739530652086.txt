@@ -1,0 +1,25 @@
+# Terms of Service
+
+Last Updated: Friday February 14, 2025
+
+These Terms of Service govern your use of our services. By using our services, you agree to these terms in their entirety. If you disagree with any part of these terms, you must not use our services.
+
+Our services are provided "as is" and "as available" without warranties of any kind, whether express or implied. We reserve the right to modify, suspend, or discontinue our services at any time without notice.
+
+Your use of our services must comply with all applicable laws and regulations. You agree not to use our services for any unlawful purpose or in any way that could damage, disable, overburden, or impair our services.
+
+All intellectual property rights in our services remain our property. Your use of our services does not grant you any rights to our intellectual property.
+
+For dispute resolution, we have established specific procedures based on your jurisdiction. For users in the United States, disputes shall be resolved through the American Arbitration Association (AAA) with a seat of arbitration in Washington, DC. For users in all other jurisdictions, including the European Union, United Kingdom, Canada, Australia, Japan, and other countries, disputes shall be resolved through the International Centre for Dispute Resolution of the American Arbitration Association (AAA-ICDR) with seats of arbitration as follows: European Union (Washington, DC), United Kingdom (New York), Canada (New York), Australia (Los Angeles), Japan (Los Angeles), and all other countries (New York). 
+
+You agree to resolve any disputes on an individual basis. Class actions and class arbitrations are not permitted. This arbitration agreement shall be governed by the Federal Arbitration Act. Notwithstanding this arbitration agreement, either party may bring an individual action in small claims court.
+
+These terms include jurisdiction-specific rights and protections. Users in the European Union and United Kingdom retain their rights under GDPR and consumer protection laws, including a 14-day cooling-off period for purchases. Australian users retain their rights under Australian Consumer Law and Privacy Principles. Canadian users retain their rights under PIPEDA and provincial consumer protection laws. Japanese users retain their rights under the Act on Protection of Personal Information and Japanese consumer protection laws.
+
+We limit our liability to the maximum extent permitted by law. This limitation does not apply to liabilities that cannot be excluded under applicable law.
+
+For questions or concerns about these terms, please contact us at kianerfaan@proton.me.
+
+The English version of these terms prevails over any translations. If any provision of these terms is found to be unenforceable, the remaining provisions will remain in effect.
+
+These terms constitute the entire agreement between you and us regarding our services.

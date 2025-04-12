@@ -1,66 +1,68 @@
-# RealTaxRate.com - 2024 Tax Calculator
+# RealTaxRate.com - International Tax Calculator
 
-A modern, user-friendly tax calculator web application powered by React and Express, designed to provide intuitive and detailed tax insights for US taxpayers.
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+A comprehensive international tax calculator web application designed to provide detailed tax insights across multiple countries. This user-friendly application calculates effective tax rates, marginal tax rates, and provides personalized tax insights based on your income.
 
 ## Features
 
-- Real-time tax calculation based on 2024 federal tax brackets
-- Detailed breakdown of tax metrics (total tax, effective rate, marginal rate)
-- AI-powered tax insights
-- Mobile-responsive design
-- Professional UI with accessibility features
+- **Multi-Country Support**: Calculate taxes for the US, Canada, UK, Japan, Australia, and more
+- **Real-Time Calculation**: Instant tax calculations with detailed breakdowns
+- **Interactive UI**: Clean, responsive interface built with modern web technologies
+- **Solopreneur Calculator**: Specialized tool for freelancers and small business owners
+- **Tax Insights**: Get personalized explanations of your tax situation
 
-## Tech Stack
+## Live Demo
 
-- **Frontend**: React, TypeScript, TailwindCSS, shadcn/ui
-- **Backend**: Express.js, Node.js
-- **State Management**: TanStack Query
+Visit [RealTaxRate.com](https://realtaxrate.com) to try the calculator.
+
+## Technology Stack
+
+- **Frontend**: React, TypeScript, TailwindCSS, shadcn/ui components
+- **Backend**: Node.js, Express
+- **State Management**: TanStack React Query
 - **Form Handling**: React Hook Form with Zod validation
-- **Styling**: TailwindCSS with shadcn/ui components
-- **Type Safety**: TypeScript, Zod
+- **Styling**: TailwindCSS with custom color scheme
+- **Routing**: Wouter for lightweight client-side routing
 
-## Getting Started
+## Installation
 
-1. Clone the repository
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/realtaxrate.git
+   cd realtaxrate
+   ```
+
 2. Install dependencies:
    ```bash
    npm install
    ```
+
 3. Start the development server:
    ```bash
    npm run dev
    ```
-   This will start both the frontend and backend servers.
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:5000
+   ```
 
 ## Project Structure
 
 ```
 ├── client/                # Frontend React application
 │   ├── src/
-│   │   ├── components/   # React components
-│   │   ├── hooks/       # Custom React hooks
-│   │   ├── lib/         # Utility functions
-│   │   └── pages/       # Page components
-├── server/               # Backend Express application
-│   ├── routes.ts        # API routes
-│   └── storage.ts       # Data storage implementation
-└── shared/              # Shared TypeScript types and schemas
-    └── schema.ts        # Zod schemas and types
+│   │   ├── components/    # React components
+│   │   ├── hooks/         # Custom React hooks
+│   │   ├── lib/           # Utility functions
+│   │   └── pages/         # Page components
+├── server/                # Backend Express application
+│   ├── routes.ts          # API routes
+│   └── storage.ts         # Data storage implementation
+└── shared/                # Shared TypeScript types and schemas
+    └── schema.ts          # Zod schemas and types
 ```
-
-## Key Components
-
-### Frontend
-
-- `TaxCalculator`: Main component for tax calculation input
-- `TaxResults`: Displays calculated tax metrics and insights
-- `tax-utils.ts`: Currency and percentage formatting utilities
-
-### Backend
-
-- `routes.ts`: Contains the tax calculation logic and API endpoints
-- `storage.ts`: Handles data persistence
-- `schema.ts`: Defines data models and validation schemas
 
 ## API Documentation
 
@@ -69,72 +71,79 @@ A modern, user-friendly tax calculator web application powered by React and Expr
 **Endpoint**: `POST /api/calculate-tax`
 
 **Request Body**:
-```typescript
+```json
 {
-  grossIncome: number; // Annual gross income
+  "country": "US",
+  "grossIncome": 75000
 }
 ```
 
 **Response**:
-```typescript
+```json
 {
-  id: number;
-  grossIncome: number;
-  taxableIncome: number;
-  totalTax: number;
-  effectiveRate: number;
-  marginalRate: number;
-  insights: string;
+  "id": 1,
+  "country": "US",
+  "grossIncome": 75000,
+  "taxableIncome": 60400,
+  "totalTax": 9374.5,
+  "effectiveRate": 12.5,
+  "marginalRate": 22,
+  "insights": "Based on your income of USD 75,000 in United States, you're in the 22% marginal tax bracket. Your effective tax rate is 12.50%, meaning you pay an average of 12.50 cents in tax per dollar earned."
 }
 ```
 
-## Maintenance Guidelines
+## Adding a New Country
 
-### Adding New Tax Brackets
+To add support for a new country:
 
-1. Update the tax bracket constants in `server/routes.ts`
-2. Update the standard deduction value if needed
-3. Modify the tax calculation logic if brackets change
+1. Update the `Countries` object in `shared/schema.ts`
+2. Add the country's tax configuration to `COUNTRY_TAX_CONFIGS` in `server/routes.ts`
+3. Include the appropriate tax brackets and standard deduction amount
 
-### Updating Tax Logic
-
-The tax calculation logic is located in `server/routes.ts`. When updating:
-1. Ensure all bracket calculations are accurate
-2. Update the insights generation
-3. Test with various income levels
-
-### UI Customization
-
-1. Theme colors are defined in `theme.json`
-2. Component styles use TailwindCSS classes
-3. Global styles are in `client/src/index.css`
-
-## Error Handling
-
-The application includes comprehensive error handling:
-- Frontend form validation using Zod
-- API error responses with meaningful messages
-- Global error boundary for React components
-
-## Testing
-
-Manual testing checklist:
-1. Verify calculations against IRS tables
-2. Test edge cases (very low/high incomes)
-3. Verify mobile responsiveness
-4. Check accessibility features
+Example:
+```typescript
+DE: {
+  name: "Germany",
+  currency: "EUR",
+  brackets: [
+    { min: 277826, rate: 0.45 },
+    { min: 57919, max: 277825, rate: 0.42 },
+    { min: 10348, max: 57918, rate: 0.14 },
+    { min: 0, max: 10347, rate: 0 },
+  ],
+  standardDeduction: 9744,
+},
+```
 
 ## Contributing
 
-1. Create a new branch for your feature
-2. Follow the existing code style
-3. Add appropriate types and validation
-4. Test thoroughly before submitting changes
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Disclaimer
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-This calculator provides estimates for informational purposes only and does not constitute financial or tax advice. Always consult a qualified tax professional for advice specific to your situation.
+## Guidelines for Contributors
+
+- Follow the existing code style and conventions
+- Add unit tests for any new or changed functionality
+- Update documentation as needed
+- Ensure all tests pass before submitting your Pull Request
 
 ## License
 
-Apache-2.0 - See LICENSE file for details
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+This calculator provides estimates only and should not be considered financial advice. Tax regulations change frequently, and calculations may not reflect the most current tax laws. Always consult with a qualified tax professional for advice specific to your situation.
+
+## Contact
+
+Project Link: [https://github.com/yourusername/realtaxrate](https://github.com/yourusername/realtaxrate)
+
+---
+
+Made with ❤️ by [Your Name]
