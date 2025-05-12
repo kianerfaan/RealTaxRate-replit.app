@@ -1,8 +1,8 @@
-# RealTaxRate.com - International Tax Calculator
+# RealTaxRate.replit.app - International Tax Calculator
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-A comprehensive international tax calculator web application designed to provide detailed tax insights across multiple countries. This user-friendly application calculates effective tax rates, marginal tax rates, and provides personalized tax insights based on your income.
+Previously RealTaxRate.com, sold to dmcanomore via Namecheap on May 12, 2025. A comprehensive international tax calculator web application designed to provide detailed tax insights across multiple countries. This user-friendly application calculates effective tax rates, marginal tax rates, and provides personalized tax insights based on your income.
 
 ## Features
 
